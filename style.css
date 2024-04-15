@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header, header div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30vw;
+}
+.buttons-header img{
+    margin-right: 5px;
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+}
+form input{
+    width: 70%;
+    padding: 1%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-right: 0px;
+}
+form button{
+    padding: 1%;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-right: 15px;
+}
+
+.submenu-header{
+    width: 50%;
+}
+.submenu-header ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.submenu-header li{
+    color: gray;
+}
+.offers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.offers-image{
+    width: 80vw;
+    height: 50vh;
+    background-color: blueviolet;
+}
+
+.products{
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+}
+.product{
+    background-color: brown;
+    width: 25vw;
+    height: 30vh;
+    margin-top: 30px;
+}
