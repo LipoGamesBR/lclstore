@@ -22,6 +22,11 @@ header, header div{
     margin-right: 5px;
 }
 
+.darkmode{
+    background: none;
+    border: 0;
+}
+
 form{
     display: flex;
     align-items: center;
@@ -67,9 +72,7 @@ form button{
 }
 
 .offers-image{
-    width: 80vw;
-    height: 50vh;
-    background-color: blueviolet;
+    width: 90vw;
 }
 
 .products{
@@ -77,12 +80,28 @@ form button{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    width: 90vw;
 }
 .product{
     background-color: brown;
     width: 25vw;
-    height: 30vh;
+    height: 30vw;
     margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width:700px){
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    .buttons-header label, .search-form{
+        display: none;
+    }
+    .buttons-header img{
+        margin-right: 5px;
+    }
 }
