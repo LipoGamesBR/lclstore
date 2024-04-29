@@ -12,6 +12,8 @@ header, header div{
     justify-content: space-between;
     align-items: center;
 }
+
+
 .buttons-header{
     display: flex;
     justify-content: space-around;
@@ -84,7 +86,10 @@ form button{
     width: 90vw;
 }
 .product{
-    background-color: brown;
+    background-color: gainsboro;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     width: 25vw;
     height: 40vw;
     margin-top: 30px;
@@ -95,7 +100,25 @@ form button{
     width: 100%;
 }
 
-@media (max-width:700px){
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: #594302;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.link-box{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.container-box{
+    color: white;
+}
+
+@media (max-width:768px){
     header{
         display: flex;
         align-items: center;
@@ -107,5 +130,32 @@ form button{
     }
     .buttons-header img{
         margin-right: 5px;
+    }
+    .submenu-header{
+        width: 100%;
+    }
+    .submenu-header ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .products{
+        width: 90vw;
+    }
+    .product{
+        width: 40vw;
+        height: 60vh;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    footer{
+        flex-direction: column;
+    }
+    .link-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 25px;
     }
 }
