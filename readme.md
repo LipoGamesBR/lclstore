@@ -10,7 +10,3 @@
 ## Tamanhos de tela
 Largura maior que 800px -> Desktop
 Largura menor que 800px -> Dispositivo móvel
-
-
-## Nome para o arquivo
-grupo 14
