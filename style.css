@@ -13,6 +13,10 @@ header, header div{
     align-items: center;
 }
 
+.down-search-form{
+    display: none;
+}
+
 
 .buttons-header{
     display: flex;
@@ -20,6 +24,10 @@ header, header div{
     align-items: center;
     width: 30vw;
 }
+.buttons-header div label{
+    text-decoration: none;
+}
+
 .buttons-header img{
     margin-right: 5px;
 }
@@ -88,10 +96,12 @@ form button{
 .product{
     background-color: gainsboro;
     display: flex;
+    justify-content: space-between;
+    gap: 20px;
     text-align: center;
     flex-direction: column;
     width: 25vw;
-    height: 40vw;
+    height: max-content;
     margin-top: 30px;
     margin-bottom: 30px;
 }
@@ -125,8 +135,11 @@ footer{
         justify-content: space-around;
         width: 100vw;
     }
-    .buttons-header label, .search-form{
+    .buttons-header label, .up-search-form{
         display: none;
+    }
+    .down-search-form{
+        display: initial;
     }
     .buttons-header img{
         margin-right: 5px;
@@ -144,7 +157,7 @@ footer{
     }
     .product{
         width: 40vw;
-        height: 60vh;
+        height: max-content;
         margin-top: 30px;
         margin-bottom: 30px;
     }
@@ -157,5 +170,14 @@ footer{
         justify-content: space-between;
         flex-direction: row;
         gap: 25px;
+    }
+}
+
+@media (max-width:500px){
+    .product{
+        width: 90vw;
+        height: max-content;
+        margin-top: 30px;
+        margin-bottom: 30px;
     }
 }
