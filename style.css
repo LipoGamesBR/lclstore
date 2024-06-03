@@ -7,10 +7,17 @@ body{
     align-items: center;
     flex-direction: column;
 }
-header, header div{
+header{
+    width: 80vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
 .down-search-form{
@@ -98,16 +105,53 @@ form button{
     display: flex;
     justify-content: space-between;
     gap: 20px;
-    text-align: center;
     flex-direction: column;
     width: 25vw;
     height: max-content;
     margin-top: 30px;
     margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes productAnimation {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+.product:hover {
+    transform: scale(1.05);
+    animation: productAnimation 0.3s ease-in-out;
+}
+
+
+.product div{
+    margin-left: 5%;
 }
 
 .product img{
     width: 100%;
+}
+
+.product button{
+    background-color: #00FF00;
+    width: 95%;
+    margin-bottom: 10px;
+    color: white;
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product button:hover {
+    background-color: #009900;
+    transform: scale(1.02);
 }
 
 footer{
