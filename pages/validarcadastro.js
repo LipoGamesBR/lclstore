@@ -125,6 +125,8 @@ form.addEventListener('submit', async (event) => {
 
     localStorage.setItem('Cliente', JSON.stringify(Cliente));
     alert('Cadastro realizado com sucesso!');
+    localStorage.setItem('ClienteLogado', JSON.stringify(Cliente));
+    window.location.href = '/';
 });
 
 

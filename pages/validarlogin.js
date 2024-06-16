@@ -1,5 +1,5 @@
-const form = document.querySelector('form');
-form.addEventListener('submit', async (event) => {
+const form = document.getElementById('form');
+form.addEventListener('submit', (event) => {
     event.preventDefault();
 
     const login = document.getElementById('login').value;
@@ -14,8 +14,9 @@ form.addEventListener('submit', async (event) => {
 
     if (Cliente.login === login && Cliente.senha === senha) {
         alert('Login realizado com sucesso');
-        return;
+        localStorage.setItem('ClienteLogado', JSON.stringify(Cliente));
+        window.location.href = '/';
+    }else{
+        alert('Login ou senha inválidos');
     }
-
-    alert('Cadastro realizado com sucesso');
 });
