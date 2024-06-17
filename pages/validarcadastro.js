@@ -1,49 +1,36 @@
 function validarCPF(cpf) {
     cpf = cpf.replace(/[^\d]+/g, '');
-
     if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) {
         return false;
     }
-
     let soma = 0;
     let resto;
-
     for (let i = 1; i <= 9; i++) {
         soma = soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
     }
-
     resto = (soma * 10) % 11;
-
     if (resto === 10 || resto === 11) {
         resto = 0;
     }
-
     if (resto !== parseInt(cpf.substring(9, 10))) {
         return false;
     }
-
     soma = 0;
-
     for (let i = 1; i <= 10; i++) {
         soma = soma + parseInt(cpf.substring(i - 1, i)) * (12 - i);
     }
-
     resto = (soma * 10) % 11;
-
     if (resto === 10 || resto === 11) {
         resto = 0;
     }
-
     if (resto !== parseInt(cpf.substring(10, 11))) {
         return false;
     }
-
     return true;
 }
 
 function consultarCEP(cep) {
     const url = `https://viacep.com.br/ws/${cep}/json/`;
-
     return fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -57,7 +44,6 @@ function consultarCEP(cep) {
 }
 
 const form = document.querySelector('form');
-
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -129,7 +115,6 @@ form.addEventListener('submit', async (event) => {
     window.location.href = '/';
 });
 
-
 function autoFillAddress() {
     const cepInput = document.getElementById('cep');
     const estadoInput = document.getElementById('estado');
@@ -137,7 +122,6 @@ function autoFillAddress() {
     const bairroInput = document.getElementById('bairro');
     const ruaInput = document.getElementById('rua');
     const numeroInput = document.getElementById('numero');
-
     cepInput.addEventListener('blur', async () => {
         const cep = cepInput.value;
         if (cep.length === 8) {

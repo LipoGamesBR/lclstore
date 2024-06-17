@@ -19,5 +19,4 @@ if (localStorage.getItem('ClienteLogado')) {
     
     document.getElementById('btnLogin').replaceWith(h2NomeCliente);
     document.getElementById('btnLogin').textContent = nomeCliente;
-
 }
